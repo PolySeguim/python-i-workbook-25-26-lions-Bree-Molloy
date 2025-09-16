@@ -1,6 +1,4 @@
 
-def whattype(userInput):
-    print(type(userInput))
 """
 Exercise 1:  Mailing Address
 Create a program that displays your name and complete mailing 
@@ -8,7 +6,12 @@ address formatted in the manner that you would usually see it
 on the outside of an envelope.  Your program does not need to 
 read any input from the user.  (9 lines)
 """
-
+def nameAndAddress():
+    print("""Briana Molloy
+          9557 Semaphore Court
+          West Chester, OH 45069""")
+    
+nameAndAddress()
 """
 Exercise 2:  Hello
 Write a program that asks the user to enter his or her name.  
@@ -37,7 +40,7 @@ def areaRoom():
 
     areaRoom = width*length
     print("Area of the room is " + str(areaRoom) + " " + units + " squared")
-
+#areaRoom()
 """
 Exercise 4:  Area of a Field
 Create a program that reads the length and width of a 
@@ -45,7 +48,14 @@ farmer’s field from the user in feet.  Display the
 area of the field in acres.  
 Hint: There are 43,560 square feet in an acre
 """
-
+def areaField():
+    print("Area of Field")
+    width = float(input("Width: "))
+    length = float(input("Length: "))
+    area = width*length
+    area = area/43560
+    print("Area of the room is " + str(area) + " " + "ft squared")
+areaField()
 """
 Exercise 5:  Bottle Deposits
 In many jurisdictions a small deposit is added to drink 
@@ -76,4 +86,4 @@ def bottleDeposits():
 
 bottleDeposits()
 #Testing Suite
-#areaRoom()
+
