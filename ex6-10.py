@@ -1,3 +1,4 @@
+import math
 """
 Exercise 6: Tax and Tip
 The program you create for this exercise will begin by reading the cost
@@ -8,6 +9,14 @@ meal amount (without tax).  The output from your program should include
 both the tax and the tip.  Format the output so that all of the values
 are displayed using two decimal places.  (17 lines)
 """
+def mealPrice ():
+    foodPrice = input("What did the food cost? ")
+    tax = float(foodPrice)*.0575
+    tip = float(foodPrice)*.18
+    totalPrice = float(foodPrice)+tax+tip
+    totalPrice = round(totalPrice,2)
+    print("The price is $" + str(totalPrice))
+mealPrice()
 
 """
 Exercise 7:  Sum of the First n Positive Integers
@@ -17,6 +26,12 @@ first n positive integers can be computed using the formula:
 sum = (n*(n+1))/2
 (12 lines)
 """
+def sumOfPosInt ():
+    n = input("What is the number? ")
+    n = int(n)
+    sum = (n*(n+1))/2
+    print(sum)
+sumOfPosInt()
 
 """
 Exercise 8:  Widgets and Gizmos
@@ -26,6 +41,12 @@ the number of gizmos in an order from the user.  Then your program should
 compute and display the total weight of the order.  (15 lines)
 
 """
+def totalWeight():
+    nWidgets = input("Number of widgets:")
+    nGizmos = input("Number of gizmos:")
+    weight = float(nGizmos)*112+float(nWidgets)*75
+    print("Weight=" + str(weight) + " grams")
+totalWeight()
 
 """
 Exercise 9:  Compound Interest
@@ -37,6 +58,19 @@ your program should compute and display the amount in the savings account after
 1, 2, and 3 years.  Display each amount so that it is rounded to 2 decimal 
 places.  (19 lines)
 """
+def compoundInterest():
+    #P(1 + r/n)^(nt)
+    p = float(input ("What is the principle value? "))
+    r = float(input ("What is the interest rate? "))
+    n = float(input ("How many times does it compound annually? "))
+    t = float(input ("How many years? "))
+    interest = p*(1 + r/n)**(n*t)
+    print (interest)
+    
+compoundInterest()
+
+
+    
 
 """
 Exercise 10:  Arithmetic
@@ -54,5 +88,22 @@ Hint:  you will probably find the log10 function in the math module helpful
 for computing the second last item in the list.
 """
 
-if __name__ == "__main__":
-    print("Hi there!")
+def arithmetic():
+    a = int(input("a="))
+    b = int(input("b="))
+    sum = a+b
+    difference = a-b
+    product = a*b
+    quotient = a/b
+    remainder = a%b
+    log = math.log10(a)
+    power = a**b
+    print("Sum=", sum)
+    print("a-b=", difference)
+    print("Product=", product)
+    print("a/b=", quotient)
+    print("Remainder", remainder)
+    print("log10a=", log)
+    print("a^b=", power)
+
+arithmetic()
